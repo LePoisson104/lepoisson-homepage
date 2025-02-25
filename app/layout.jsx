@@ -1,6 +1,8 @@
 import { M_PLUS_1 } from "next/font/google";
 import Navbar from "../components/navbar";
 import Providers from "@/lib/providers";
+import { Container } from "@mui/material";
+import Footer from "../components/footer";
 
 const mPlus1 = M_PLUS_1({
   subsets: ["latin"],
@@ -18,10 +20,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={mPlus1.className}>
         <Providers>
-          <main>
-            <Navbar />
+          <Navbar />
+          <Container maxWidth="sm" sx={{ minHeight: "100vh" }}>
             {children}
-          </main>
+          </Container>
+          <Footer />
         </Providers>
       </body>
     </html>

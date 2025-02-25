@@ -2,13 +2,11 @@
 import {
   Box,
   Container,
-  Link,
   Stack,
   Menu,
   MenuItem,
   IconButton,
 } from "@mui/material";
-import NextLink from "next/link";
 import Logo from "./logo";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ThemeToggleBtn from "./theme-toggle-btn";
@@ -17,41 +15,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState, useEffect } from "react";
 import { tokens } from "@/lib/theme";
 import { useTheme } from "@emotion/react";
-
-const LinkItem = ({ href, children, target, ...props }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
-  return (
-    <Link
-      component={NextLink}
-      href={href}
-      target={target}
-      underline="none"
-      sx={{
-        position: "relative",
-        color: colors.primary[1000],
-        "&::after": {
-          content: '""',
-          position: "absolute",
-          width: "0%",
-          height: "1px",
-          bottom: "-1px",
-          left: 0,
-          bgcolor: colors.primary[1000],
-          transition: "width 0.3s ease-in-out",
-        },
-        "&:hover::after": {
-          width: "100%",
-        },
-      }}
-    >
-      <Box display="flex" fontSize={14} color={colors.primary[1000]} {...props}>
-        {children}
-      </Box>
-    </Link>
-  );
-};
+import LinkItem from "./link-item";
 
 const Navbar = () => {
   const theme = useTheme();
@@ -82,13 +46,14 @@ const Navbar = () => {
   return (
     <Box
       sx={{
-        position: "fixed",
+        position: "sticky",
         width: "100%",
         top: 0,
         left: 0,
         bgcolor: theme.palette.mode === "light" ? "#ffffff40" : "#20202380",
         backdropFilter: "blur(10px)",
         transition: "background-color 0.3s ease, backdrop-filter 0.3s ease",
+        zIndex: 2,
       }}
     >
       <Container
@@ -107,7 +72,7 @@ const Navbar = () => {
           spacing={3}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
-          <LinkItem href="/works">Portfolio</LinkItem>
+          <LinkItem href="/portfolio">Portfolio</LinkItem>
           <LinkItem href="/resume">Resume</LinkItem>
           <LinkItem href="/blog">Blog</LinkItem>
           <LinkItem href="/contact">Contact Me</LinkItem>
@@ -170,7 +135,7 @@ const Navbar = () => {
               <LinkItem href="/">About</LinkItem>
             </MenuItem>
             <MenuItem onClick={handleClose}>
-              <LinkItem href="/works">Portfolio</LinkItem>
+              <LinkItem href="/portfolio">Portfolio</LinkItem>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <LinkItem href="/resume">Resume</LinkItem>
