@@ -17,7 +17,7 @@ const Footer = () => {
         justifyContent: "center",
         color: "grey",
         mt: 5,
-        mb: 3,
+        mb: 2,
         p: 2,
       }}
     >

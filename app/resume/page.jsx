@@ -1,10 +1,14 @@
-import { Box, Typography } from "@mui/material";
+"use client";
+import { Box, Typography, Container } from "@mui/material";
+import ArticleLayout from "@/components/article";
 
 const Resume = () => {
   return (
-    <Box>
-      <Typography>resume</Typography>
-    </Box>
+    <ArticleLayout title={"Resume"}>
+      <Container>
+        <Typography>resume</Typography>
+      </Container>
+    </ArticleLayout>
   );
 };
 

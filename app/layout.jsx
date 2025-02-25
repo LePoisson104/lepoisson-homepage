@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={mPlus1.className}>
         <Providers>
           <Navbar />
-          <Container maxWidth="sm" sx={{ minHeight: "100vh" }}>
+          <Container sx={{ minHeight: "100vh" }} maxWidth="sm">
             {children}
           </Container>
           <Footer />
