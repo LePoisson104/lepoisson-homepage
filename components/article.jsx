@@ -14,6 +14,10 @@ const ArticleLayout = ({ children, title }) => {
     }
   }, [title]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Reset scroll position to top on page load
+  }, []);
+
   return (
     <motion.article
       initial="hidden"

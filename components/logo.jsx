@@ -10,7 +10,7 @@ const Logo = () => {
   return (
     <Link href="/" scroll={false} style={{ textDecoration: "none" }}>
       <Typography
-        fontSize={18}
+        fontSize={20}
         fontWeight={"bold"}
         color={colors.primary[1000]}
       >

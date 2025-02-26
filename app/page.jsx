@@ -3,9 +3,10 @@ import {
   Box,
   Typography,
   Button,
-  Container,
   Avatar,
   Link,
+  List,
+  ListItem,
 } from "@mui/material";
 import NextLink from "next/link";
 import { useTheme } from "@emotion/react";
@@ -16,7 +17,21 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ArticleLayout from "@/components/article";
 import SectionTitle from "@/components/section-title";
-import BioSection from "@/components/bio-section";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
+import { timelineOppositeContentClasses } from "@mui/lab/TimelineOppositeContent";
+import CakeOutlinedIcon from "@mui/icons-material/CakeOutlined";
+import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
+import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import Section from "@/components/section";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 export default function Home() {
   const theme = useTheme();
@@ -36,7 +51,7 @@ export default function Home() {
 
   return (
     <ArticleLayout>
-      <Container>
+      <Box px={4}>
         <Box
           sx={{
             textAlign: "center",
@@ -77,8 +92,8 @@ export default function Home() {
           <Box>
             <Avatar
               sx={{
-                width: 90,
-                height: 90,
+                width: 110,
+                height: 110,
               }}
               src="/images/AvatarPic.jpg"
               alt="profile image"
@@ -86,7 +101,7 @@ export default function Home() {
           </Box>
         </Box>
 
-        <Box component="section" mt={5}>
+        <Section mt={5} delay={0.1}>
           <SectionTitle title={"About"} width={60} />
           <Typography
             component={"p"}
@@ -143,68 +158,182 @@ export default function Home() {
               My portfolio
             </Button>
           </Box>
-        </Box>
+        </Section>
 
-        <Box component={"section"} mt={3}>
+        <Section mt={3} delay={0.2}>
           <SectionTitle title={"Bio"} width={30} />
-          <BioSection year={2002} mt={1}>
-            <Typography component={"p"} sx={{ textAlign: "justify" }}>
-              Born in{" "}
-              <Link
-                component={NextLink}
-                href={
-                  "https://www.google.com/search?q=quang+nam&rlz=1C5MACD_enUS1018US1018&oq=quang+n&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIJCAEQRRg7GIAEMgYIAhBFGDkyDQgDEC4YkQIYgAQYigUyDQgEEC4YkQIYgAQYigUyDQgFEC4YkQIYgAQYigUyDQgGEC4YkQIYgAQYigUyBggHEEUYPdIBCDIyMjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
-                }
-                underline="none"
-                target="_blank"
-                sx={{
-                  color: colors.purpleAccent[300],
-                  cursor: "pointer",
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                }}
-              >
-                Quảng Nam
-              </Link>
-              , Việt Nam.
-            </Typography>
-          </BioSection>
-          <BioSection year={2022} mt={0.5}>
-            <Typography component={"p"} sx={{ textAlign: "justify" }}>
-              Graduated from Lone Star College, The Woodlands, TX with an
-              Associate of Science in Computer Science (GPA: 4.0).
-            </Typography>
-          </BioSection>
-          <BioSection year={2024} mt={0.5}>
-            <Typography component={"p"} sx={{ textAlign: "justify" }}>
-              Completed my Bachelor of Science in Computer Science with a minor
-              in Mathematics from the University of Houston, Houston, TX (GPA:
-              3.35).
-            </Typography>
-          </BioSection>
-          <BioSection year={"2024 to present"} mt={0.5}>
-            <Typography component={"p"} sx={{ textAlign: "justify" }}>
-              Working on my startup{" "}
-              <Link
-                component={NextLink}
-                href={"/"}
-                underline="none"
-                sx={{
-                  color: colors.purpleAccent[300],
-                  cursor: "pointer",
-                  "&:hover": {
-                    textDecoration: "underline",
-                  },
-                }}
-              >
-                Endurofy
-              </Link>
-            </Typography>
-          </BioSection>
-        </Box>
 
-        <Box component={"section"} mt={3}>
+          <Timeline
+            sx={{
+              [`& .${timelineOppositeContentClasses.root}`]: {
+                flex: 0.2,
+              },
+            }}
+          >
+            {/* birth place */}
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                align="right"
+                variant="body1"
+                color="text.primary"
+              >
+                2002
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot sx={{ bgcolor: "#FF7F32" }}>
+                  <CakeOutlinedIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Typography component={"p"} color="text.secondary">
+                  Born in{" "}
+                  <Link
+                    component={NextLink}
+                    href={
+                      "https://www.google.com/search?q=quang+nam&rlz=1C5MACD_enUS1018US1018&oq=quang+n&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIJCAEQRRg7GIAEMgYIAhBFGDkyDQgDEC4YkQIYgAQYigUyDQgEEC4YkQIYgAQYigUyDQgFEC4YkQIYgAQYigUyDQgGEC4YkQIYgAQYigUyBggHEEUYPdIBCDIyMjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                    }
+                    underline="none"
+                    target="_blank"
+                    sx={{
+                      color: colors.purpleAccent[300],
+                      cursor: "pointer",
+                      "&:hover": {
+                        textDecoration: "underline",
+                      },
+                    }}
+                  >
+                    Quảng Nam
+                  </Link>
+                  , Việt Nam.
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+            {/* Lone Star College */}
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                align="right"
+                variant="body1"
+                color="text.primary"
+              >
+                2022
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot sx={{ bgcolor: "#1E4BB8" }}>
+                  <SchoolOutlinedIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Typography component={"p"} color="text.secondary">
+                  Graduated from Lone Star College, The Woodlands, TX with an
+                  Associate of Science in Computer Science (GPA: 4.0).
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+            {/* University */}
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{ m: "auto 0" }}
+                align="right"
+                variant="body1"
+                color="text.primary"
+              >
+                2024
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot sx={{ bgcolor: colors.redAccent[500] }}>
+                  <SchoolOutlinedIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Typography component={"p"} color="text.secondary">
+                  Completed my Bachelor of Science in Computer Science with a
+                  minor in Mathematics from the University of Houston, Houston,
+                  TX (GPA: 3.35).
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+            {/* Present */}
+            <TimelineItem>
+              <TimelineOppositeContent
+                sx={{
+                  m: "auto 0",
+                  align: "right",
+                  hyphens: "auto",
+                  overflowWrap: "break-word",
+                  wordBreak: "break-word",
+                }}
+                variant="body1"
+                color="text.primary"
+              >
+                2024 to present
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <TimelineConnector />
+                <TimelineDot sx={{ bgcolor: "#00B200" }}>
+                  <TerminalOutlinedIcon />
+                </TimelineDot>
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Typography
+                  component={"p"}
+                  color="text.secondary"
+                  sx={{
+                    hyphens: "auto",
+                    overflowWrap: "break-word",
+                    wordBreak: "break-word",
+                  }}
+                >
+                  Working on my startup{" "}
+                  <Link
+                    component={NextLink}
+                    href={"/"}
+                    underline="none"
+                    sx={{
+                      color: colors.purpleAccent[300],
+                      cursor: "pointer",
+                      "&:hover": {
+                        textDecoration: "underline",
+                      },
+                    }}
+                  >
+                    Endurofy
+                  </Link>
+                </Typography>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
+        </Section>
+
+        <Section delay={0.3} mt={3}>
           <SectionTitle title={"I ♥"} width={25} />
           <Typography
             component={"p"}
@@ -212,8 +341,80 @@ export default function Home() {
           >
             Web development, Weight lifting, Sports, Video games
           </Typography>
-        </Box>
-      </Container>
+        </Section>
+
+        <Section delay={0.3} mt={3}>
+          <SectionTitle title={"On the web"} width={113} />
+          <List>
+            <ListItem>
+              {/* Adds a bottom margin */}
+              <Link
+                href="https://www.linkedin.com/in/viet-pham-112087214/"
+                target="_blank"
+              >
+                <Button
+                  startIcon={<LinkedInIcon />}
+                  sx={{
+                    textTransform: "none",
+                    color: "white",
+                    bgcolor: colors.purpleAccent[400],
+                    "&:hover": {
+                      bgcolor: colors.purpleAccent[200],
+                    },
+                    px: 2,
+                  }}
+                >
+                  LinkedIn
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link
+                href="https://github.com/LePoisson104?tab=overview&from=2025-02-01&to=2025-02-24"
+                target="_blank"
+              >
+                <Button
+                  startIcon={<GitHubIcon />}
+                  sx={{
+                    textTransform: "none",
+                    color: "white",
+                    bgcolor: colors.purpleAccent[400],
+                    "&:hover": {
+                      bgcolor: colors.purpleAccent[200],
+                    },
+                    px: 2,
+                  }}
+                >
+                  @lepoisson104
+                </Button>
+              </Link>
+            </ListItem>
+
+            <ListItem>
+              <Link
+                href="https://www.instagram.com/vp_ghoan?igsh=Y2J3ZDI5cHRveTFq&utm_source=qr"
+                target="_blank"
+              >
+                <Button
+                  startIcon={<InstagramIcon />}
+                  sx={{
+                    textTransform: "none",
+                    color: "white",
+                    bgcolor: colors.purpleAccent[400],
+                    "&:hover": {
+                      bgcolor: colors.purpleAccent[200],
+                    },
+                    px: 2,
+                  }}
+                >
+                  @vp_ghoan
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+        </Section>
+      </Box>
     </ArticleLayout>
   );
 }

@@ -1,7 +1,7 @@
 import { M_PLUS_1 } from "next/font/google";
 import Navbar from "../components/navbar";
 import Providers from "@/lib/providers";
-import { Container } from "@mui/material";
+import { Box } from "@mui/material";
 import Footer from "../components/footer";
 
 const mPlus1 = M_PLUS_1({
@@ -18,12 +18,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={mPlus1.className}>
+      <body
+        className={mPlus1.className}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <Providers>
           <Navbar />
-          <Container sx={{ minHeight: "100vh" }} maxWidth="sm">
+          <Box
+            sx={{
+              // minHeheight: "100vh",
+              width: "100%",
+              maxWidth: "650px",
+            }}
+          >
             {children}
-          </Container>
+          </Box>
           <Footer />
         </Providers>
       </body>
