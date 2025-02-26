@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Box
             sx={{
-              // minHeheight: "100vh",
+              mt: 7,
               width: "100%",
               maxWidth: "650px",
             }}
