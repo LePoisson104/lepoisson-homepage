@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
               mt: 7,
               width: "100%",
               maxWidth: "650px",
+              px: 4,
             }}
           >
             {children}

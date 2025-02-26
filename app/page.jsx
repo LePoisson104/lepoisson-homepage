@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <ArticleLayout>
-      <Box px={4}>
+      <Box>
         <Box
           sx={{
             textAlign: "center",
@@ -166,9 +166,10 @@ export default function Home() {
           <Timeline
             sx={{
               [`& .${timelineOppositeContentClasses.root}`]: {
-                flex: 0.2,
+                flex: 0.3,
               },
             }}
+            // position="alternate"
           >
             {/* birth place */}
             <TimelineItem>
