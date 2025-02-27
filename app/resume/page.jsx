@@ -5,9 +5,9 @@ import ArticleLayout from "@/components/article";
 const Resume = () => {
   return (
     <ArticleLayout title={"Resume"}>
-      <Container>
-        <Typography>resume</Typography>
-      </Container>
+      <Box mt={5}>
+        <Typography>Resume</Typography>
+      </Box>
     </ArticleLayout>
   );
 };

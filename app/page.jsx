@@ -7,6 +7,7 @@ import {
   Link,
   List,
   ListItem,
+  Badge,
 } from "@mui/material";
 import NextLink from "next/link";
 import { useTheme } from "@emotion/react";
@@ -32,6 +33,39 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Section from "@/components/section";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { styled } from "@mui/material/styles";
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    backgroundColor: "#44b700",
+    color: "#44b700",
+    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+    width: 15,
+    height: 15,
+    borderRadius: "50%",
+    "&::after": {
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      borderRadius: "50%",
+      animation: "ripple 1.2s infinite ease-in-out",
+      border: "1px solid currentColor",
+      content: '""',
+    },
+  },
+  "@keyframes ripple": {
+    "0%": {
+      transform: "scale(.8)",
+      opacity: 1,
+    },
+    "100%": {
+      transform: "scale(2.4)",
+      opacity: 0,
+    },
+  },
+}));
 
 export default function Home() {
   const theme = useTheme();
@@ -40,7 +74,7 @@ export default function Home() {
 
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
-      strings: ["Hi, I'm Viet, a full-stack developer based in Texas!"],
+      strings: ["Hi, I'm Viet, a full-stack developer!"],
       typeSpeed: 20,
       backSpeed: 30,
       showCursor: false,
@@ -82,22 +116,32 @@ export default function Home() {
               Viet Pham
             </Typography>
             <Typography variant="body1" fontWeight={200}>
-              Software Engineer (#OpenToWork)
+              Software Engineer (#AvailableForWork)
             </Typography>
-            <Typography variant="body1" fontWeight={200} mt={1}>
-              <LocationOnOutlinedIcon fontSize="small" />
+
+            <Typography ariant="body1" fontWeight={200} mt={1}>
+              <LocationOnOutlinedIcon
+                fontSize="small"
+                sx={{ color: colors.greenAccent[500] }}
+              />
               Houston, Texas
             </Typography>
           </Box>
           <Box>
-            <Avatar
-              sx={{
-                width: 110,
-                height: 110,
-              }}
-              src="/images/AvatarPic.jpg"
-              alt="profile image"
-            />
+            <StyledBadge
+              overlap="circular"
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              variant="dot"
+            >
+              <Avatar
+                sx={{
+                  width: 110,
+                  height: 110,
+                }}
+                src="/images/AvatarPic.jpg"
+                alt="profile image"
+              />
+            </StyledBadge>
           </Box>
         </Box>
 

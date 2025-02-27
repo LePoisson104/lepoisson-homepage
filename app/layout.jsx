@@ -1,10 +1,10 @@
-import { M_PLUS_1 } from "next/font/google";
+import { M_PLUS_Rounded_1c } from "next/font/google";
 import Navbar from "../components/navbar";
 import Providers from "@/lib/providers";
 import { Box } from "@mui/material";
 import Footer from "../components/footer";
 
-const mPlus1 = M_PLUS_1({
+const mPlus1 = M_PLUS_Rounded_1c({
   subsets: ["latin"],
   weight: ["300", "400", "500", "700"],
   display: "swap",

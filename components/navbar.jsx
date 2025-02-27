@@ -16,10 +16,12 @@ import { useState, useEffect } from "react";
 import { tokens } from "@/lib/theme";
 import { useTheme } from "@emotion/react";
 import LinkItem from "./link-item";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  const pathname = usePathname();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -72,10 +74,18 @@ const Navbar = () => {
           spacing={3}
           sx={{ display: { xs: "none", md: "flex" } }}
         >
-          <LinkItem href="/portfolio">Portfolio</LinkItem>
-          <LinkItem href="/resume">Resume</LinkItem>
-          <LinkItem href="/blog">Blog</LinkItem>
-          <LinkItem href="/contact">Contact Me</LinkItem>
+          <LinkItem href="/portfolio" isActive={pathname === "/portfolio"}>
+            Portfolio
+          </LinkItem>
+          <LinkItem href="/resume" isActive={pathname === "/resume"}>
+            Resume
+          </LinkItem>
+          <LinkItem href="/blog" isActive={pathname === "/blog"}>
+            Blog
+          </LinkItem>
+          <LinkItem href="/contact" isActive={pathname === "/contact"}>
+            Contact Me
+          </LinkItem>
           <LinkItem
             href="https://www.linkedin.com/in/viet-pham-112087214/"
             target="_blank"

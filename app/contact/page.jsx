@@ -1,10 +1,14 @@
+"use client";
 import { Box, Typography } from "@mui/material";
+import ArticleLayout from "@/components/article";
 
 const Contact = () => {
   return (
-    <Box>
-      <Typography>Contact Me</Typography>
-    </Box>
+    <ArticleLayout title={"Contact me"}>
+      <Box mt={5}>
+        <Typography>Contact me</Typography>
+      </Box>
+    </ArticleLayout>
   );
 };
 

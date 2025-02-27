@@ -3,10 +3,10 @@ import { useTheme } from "@emotion/react";
 import NextLink from "next/link";
 import { Link, Box } from "@mui/material";
 
-const LinkItem = ({ href, children, target, bgcolor, ...props }) => {
+const LinkItem = ({ href, children, target, bgcolor, isActive, ...props }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  console.log(isActive);
   return (
     <Link
       component={NextLink}
@@ -15,11 +15,10 @@ const LinkItem = ({ href, children, target, bgcolor, ...props }) => {
       underline="none"
       sx={{
         position: "relative",
-        color: colors.primary[1000],
         "&::after": {
           content: '""',
           position: "absolute",
-          width: "0%",
+          width: isActive ? "100%" : "0%",
           height: "1px",
           bottom: "-1px",
           left: 0,

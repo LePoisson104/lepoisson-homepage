@@ -3,7 +3,6 @@ import NextLink from "next/link";
 import { Box, Typography, Container, Divider, Button } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { tokens } from "@/lib/theme";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const PageNotFound = () => {
   const theme = useTheme();
@@ -30,7 +29,6 @@ const PageNotFound = () => {
         <Box sx={{ display: "flex", width: "100%", justifyContent: "center" }}>
           <Button
             component={NextLink}
-            startIcon={<ChevronLeftIcon fontSize="small" />}
             href="/"
             sx={{
               textTransform: "none",
