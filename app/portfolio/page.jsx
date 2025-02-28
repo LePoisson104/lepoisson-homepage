@@ -92,7 +92,7 @@ const Portfolio = () => {
         <Box sx={{ flexGrow: 1 }}>
           <Grid2 container spacing={2}>
             <ProjectCard
-              src={"/images/AvatarPic.jpg"}
+              src={"/images/endurofy/EndurofyHomepage.png"}
               alt="JSLogo"
               title={"Endurofy"}
               delay={0.1}
@@ -109,7 +109,7 @@ const Portfolio = () => {
               </Typography>
             </ProjectCard>
             <ProjectCard
-              src={"/images/AvatarPic.jpg"}
+              src={"/images/PythonLogo.png"}
               alt="JSLogo"
               title={"Python Interpreter"}
               delay={0.1}
@@ -143,7 +143,7 @@ const Portfolio = () => {
               </Typography>
             </ProjectCard>
             <ProjectCard
-              src={"/images/AvatarPic.jpg"}
+              src={"/images/coloredBrain.png"}
               alt="JSLogo"
               title={"3 Agents Reinforcement Learning"}
               delay={0.3}

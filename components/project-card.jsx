@@ -28,13 +28,28 @@ const ProjectCard = ({ src, alt, children, title, delay, href }) => {
               },
             }}
           >
-            <Image
-              src={src}
-              alt={alt}
+            <Box
               width={280}
-              height={200}
-              style={{ borderRadius: 10, width: "100%", minWidth: 280 }}
-            />
+              height={160}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                bgcolor:
+                  theme.palette.mode === "dark"
+                    ? "rgba(255, 255, 255, 0.02)"
+                    : "rgba(255, 255, 255, 0.3)",
+                borderRadius: 2,
+              }}
+            >
+              <Image
+                src={src}
+                alt={alt}
+                width={60}
+                height={60}
+                style={{ borderRadius: 10 }}
+              />
+            </Box>
             <Typography variant="h5" mt={1} mb={1} fontWeight={500}>
               {title}
             </Typography>
