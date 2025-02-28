@@ -89,18 +89,76 @@ const Portfolio = () => {
           />
         </Box>
         <SectionTitle title={"Works"} width={58} />
-        <Box sx={{ flexGrow: 1, mt: 3 }}>
+        <Box sx={{ flexGrow: 1 }}>
           <Grid2 container spacing={2}>
             <ProjectCard
-              src={"/images/AWS.png"}
+              src={"/images/AvatarPic.jpg"}
               alt="JSLogo"
               title={"Endurofy"}
-            />
-            <Typography component={"p"}>
-              A Markdown note-taking app with 100+ plugins, cross-platform and
-              encrypted data sync support. The life-time revenue is more than
-              $300k.
-            </Typography>
+              delay={0.1}
+              href={"/portfolio/endurofy"}
+            >
+              <Typography
+                component={"p"}
+                sx={{ textIndent: "1em" }}
+                color="text.secondary"
+              >
+                A Markdown note-taking app with 100+ plugins, cross-platform and
+                encrypted data sync support. The life-time revenue is more than
+                $300k.
+              </Typography>
+            </ProjectCard>
+            <ProjectCard
+              src={"/images/AvatarPic.jpg"}
+              alt="JSLogo"
+              title={"Python Interpreter"}
+              delay={0.1}
+              href={"/portfolio/python-interpreter"}
+            >
+              <Typography
+                component={"p"}
+                sx={{ textIndent: "1em" }}
+                color="text.secondary"
+              >
+                A Markdown note-taking app with 100+ plugins, cross-platform and
+                encrypted data sync support. The life-time revenue is more than
+                $300k.
+              </Typography>
+            </ProjectCard>
+            <ProjectCard
+              src={"/images/AvatarPic.jpg"}
+              alt="JSLogo"
+              title={"Zoo webapp"}
+              delay={0.3}
+              href={"/portfolio/zoo-webapp"}
+            >
+              <Typography
+                component={"p"}
+                sx={{ textIndent: "1em" }}
+                color="text.secondary"
+              >
+                A Markdown note-taking app with 100+ plugins, cross-platform and
+                encrypted data sync support. The life-time revenue is more than
+                $300k.
+              </Typography>
+            </ProjectCard>
+            <ProjectCard
+              src={"/images/AvatarPic.jpg"}
+              alt="JSLogo"
+              title={"3 Agents Reinforcement Learning"}
+              delay={0.3}
+              href={"/portfolio/pdworld"}
+            >
+              <Typography
+                component={"p"}
+                sx={{ textIndent: "1em" }}
+                color="text.secondary"
+              >
+                A Markdown note-taking app with 100+ plugins, cross-platform and
+                encrypted data sync support. The life-time revenue is more than
+                $300k.
+              </Typography>
+            </ProjectCard>
           </Grid2>
         </Box>
       </Box>

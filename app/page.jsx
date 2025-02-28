@@ -379,7 +379,7 @@ export default function Home() {
         </Section>
 
         <Section delay={0.3} mt={3}>
-          <SectionTitle title={"I ♥"} width={25} />
+          <SectionTitle title={"I ♥"} width={30} />
           <Typography
             component={"p"}
             sx={{ textAlign: "justify", textIndent: "1em" }}
