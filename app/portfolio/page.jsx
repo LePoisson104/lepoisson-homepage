@@ -1,20 +1,9 @@
 "use client";
-import { Box, Grid2, Paper } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import ArticleLayout from "@/components/article";
 import SectionTitle from "@/components/section-title";
 import TechStackLogo from "@/components/tech-stack-logo";
-import { styled } from "@mui/material/styles";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-  ...theme.applyStyles("dark", {
-    backgroundColor: "#1A2027",
-  }),
-}));
+import ProjectCard from "@/components/project-card";
 
 const Portfolio = () => {
   return (
@@ -37,7 +26,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/JSLogo.png"}
-            alt={"jslogo"}
+            alt={"JSLogo"}
             bgcolor={"rgba(255, 248, 211, 0.5)"}
             duration={0.5}
             delay={0.1}
@@ -45,7 +34,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/TSLogo.png"}
-            alt={"jslogo"}
+            alt={"TSLogo"}
             bgcolor={"rgba(173, 216, 230, .5)"}
             duration={0.5}
             delay={0.2}
@@ -53,7 +42,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/ReactLogo.png"}
-            alt={"jslogo"}
+            alt={"ReactLogo"}
             bgcolor={"rgba(173, 216, 230, .5)"}
             duration={0.5}
             delay={0.3}
@@ -61,7 +50,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/Next.js.png"}
-            alt={"jslogo"}
+            alt={"NextLogo"}
             bgcolor={"rgba(255, 255, 255, 0.5)"}
             duration={0.5}
             delay={0.4}
@@ -69,7 +58,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/Express.png"}
-            alt={"jslogo"}
+            alt={"ExpressLogo"}
             bgcolor={"rgba(255, 255, 255, 0.5)"}
             duration={0.5}
             delay={0.5}
@@ -77,7 +66,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/MySQL.png"}
-            alt={"jslogo"}
+            alt={"MySQLLogo"}
             bgcolor={"rgba(173, 216, 230, .5)"}
             duration={0.5}
             delay={0.6}
@@ -85,7 +74,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/AWS.png"}
-            alt={"jslogo"}
+            alt={"AWSLogo"}
             bgcolor={"rgba(255, 213, 140, .5)"}
             duration={0.5}
             delay={0.7}
@@ -93,7 +82,7 @@ const Portfolio = () => {
 
           <TechStackLogo
             src={"/images/Material UI.png"}
-            alt={"jslogo"}
+            alt={"MUILogo"}
             bgcolor={"rgba(173, 216, 230, .5)"}
             duration={0.5}
             delay={0.8}
@@ -102,12 +91,16 @@ const Portfolio = () => {
         <SectionTitle title={"Works"} width={58} />
         <Box sx={{ flexGrow: 1, mt: 3 }}>
           <Grid2 container spacing={2}>
-            <Grid2 size={{ md: 6, sm: 12, xs: 12 }}>
-              <Item>xs=6 md=6</Item>
-            </Grid2>
-            <Grid2 size={{ md: 6, sm: 12, xs: 12 }}>
-              <Item>xs=6 md=6</Item>
-            </Grid2>
+            <ProjectCard
+              src={"/images/AWS.png"}
+              alt="JSLogo"
+              title={"Endurofy"}
+            />
+            <Typography component={"p"}>
+              A Markdown note-taking app with 100+ plugins, cross-platform and
+              encrypted data sync support. The life-time revenue is more than
+              $300k.
+            </Typography>
           </Grid2>
         </Box>
       </Box>
