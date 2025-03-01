@@ -162,7 +162,7 @@ export default function Home() {
             working on{" "}
             <Link
               component={NextLink}
-              href={"/"}
+              href={"/portfolio/endurofy"}
               underline="none"
               sx={{
                 color: colors.purpleAccent[300],
@@ -360,7 +360,7 @@ export default function Home() {
                   Working on my startup{" "}
                   <Link
                     component={NextLink}
-                    href={"/"}
+                    href={"/portfolio/endurofy"}
                     underline="none"
                     sx={{
                       color: colors.purpleAccent[300],

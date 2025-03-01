@@ -4,8 +4,13 @@ import ArticleLayout from "@/components/article";
 import SectionTitle from "@/components/section-title";
 import TechStackLogo from "@/components/tech-stack-logo";
 import ProjectCard from "@/components/project-card";
+import { useTheme } from "@emotion/react";
+import { tokens } from "@/lib/theme";
 
 const Portfolio = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
   return (
     <ArticleLayout title={"Portfolio"}>
       <Box mt={5}>
@@ -89,23 +94,28 @@ const Portfolio = () => {
           />
         </Box>
         <SectionTitle title={"Works"} width={58} />
-        <Box sx={{ flexGrow: 1 }}>
+        <Box
+          sx={{
+            flexGrow: 1,
+          }}
+        >
           <Grid2 container spacing={2}>
             <ProjectCard
-              src={"/images/endurofy/EndurofyHomepage.png"}
-              alt="JSLogo"
               title={"Endurofy"}
               delay={0.1}
               href={"/portfolio/endurofy"}
+              content={"Endurofy"}
+              color={colors.purpleAccent[400]}
+              fontWeight={"bold"}
+              fontSize={30}
             >
               <Typography
                 component={"p"}
                 sx={{ textIndent: "1em" }}
                 color="text.secondary"
               >
-                A Markdown note-taking app with 100+ plugins, cross-platform and
-                encrypted data sync support. The life-time revenue is more than
-                $300k.
+                A fitness app that allow users to log their food, daily weights,
+                and workouts all in one app.
               </Typography>
             </ProjectCard>
             <ProjectCard
@@ -114,32 +124,33 @@ const Portfolio = () => {
               title={"Python Interpreter"}
               delay={0.1}
               href={"/portfolio/python-interpreter"}
+              width={60}
+              height={60}
             >
               <Typography
                 component={"p"}
                 sx={{ textIndent: "1em" }}
                 color="text.secondary"
               >
-                A Markdown note-taking app with 100+ plugins, cross-platform and
-                encrypted data sync support. The life-time revenue is more than
-                $300k.
+                An online Python interpreter written from scratch using C++.
               </Typography>
             </ProjectCard>
             <ProjectCard
-              src={"/images/AvatarPic.jpg"}
-              alt="JSLogo"
-              title={"Zoo webapp"}
+              title={"Zoo web app"}
               delay={0.3}
               href={"/portfolio/zoo-webapp"}
+              content={"Zoo"}
+              color={colors.greenAccent[500]}
+              fontWeight={"bold"}
+              fontSize={30}
             >
               <Typography
                 component={"p"}
                 sx={{ textIndent: "1em" }}
                 color="text.secondary"
               >
-                A Markdown note-taking app with 100+ plugins, cross-platform and
-                encrypted data sync support. The life-time revenue is more than
-                $300k.
+                Zoo web app focused on optimizing zoo operations, improving
+                efficiecy and visitor experience.
               </Typography>
             </ProjectCard>
             <ProjectCard
@@ -148,15 +159,16 @@ const Portfolio = () => {
               title={"3 Agents Reinforcement Learning"}
               delay={0.3}
               href={"/portfolio/pdworld"}
+              width={60}
+              height={60}
             >
               <Typography
                 component={"p"}
                 sx={{ textIndent: "1em" }}
                 color="text.secondary"
               >
-                A Markdown note-taking app with 100+ plugins, cross-platform and
-                encrypted data sync support. The life-time revenue is more than
-                $300k.
+                A reinforcement learning model that trains three agents to
+                efficiently complete pickup and drop-off tasks.
               </Typography>
             </ProjectCard>
           </Grid2>

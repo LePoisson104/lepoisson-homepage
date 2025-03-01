@@ -5,12 +5,30 @@ import Link from "next/link";
 import { useTheme } from "@emotion/react";
 import { tokens } from "@/lib/theme";
 
-const ProjectCard = ({ src, alt, children, title, delay, href }) => {
+const ProjectCard = ({
+  src,
+  alt,
+  children,
+  title,
+  delay,
+  href,
+  width,
+  height,
+  content,
+  ...props
+}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Grid2 size={{ md: 6, sm: 12, xs: 12 }} mt={4}>
+    <Grid2
+      size={{ md: 6, sm: 12, xs: 12 }}
+      mt={4}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <Section delay={delay}>
         <Link
           href={href}
@@ -26,6 +44,7 @@ const ProjectCard = ({ src, alt, children, title, delay, href }) => {
               "&:hover": {
                 transform: "scale(1.05)", // Slightly enlarge on hover
               },
+              width: 280,
             }}
           >
             <Box
@@ -39,16 +58,20 @@ const ProjectCard = ({ src, alt, children, title, delay, href }) => {
                   theme.palette.mode === "dark"
                     ? "rgba(255, 255, 255, 0.02)"
                     : "rgba(255, 255, 255, 0.3)",
+                backfaceVisibility: "hidden",
                 borderRadius: 2,
               }}
             >
-              <Image
-                src={src}
-                alt={alt}
-                width={60}
-                height={60}
-                style={{ borderRadius: 10 }}
-              />
+              {src && (
+                <Image
+                  src={src}
+                  alt={alt}
+                  width={width}
+                  height={height}
+                  style={{ borderRadius: 10 }}
+                />
+              )}
+              {content && <Typography sx={{ ...props }}>{content}</Typography>}
             </Box>
             <Typography variant="h5" mt={1} mb={1} fontWeight={500}>
               {title}
