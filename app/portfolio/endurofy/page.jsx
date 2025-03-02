@@ -1,16 +1,12 @@
 "use client";
-import { Box, Typography, List, ListItem, Badge, Link } from "@mui/material";
+import { Box, Typography, List, ListItem } from "@mui/material";
 import ArticleLayout from "@/components/article";
-import { useTheme } from "@emotion/react";
-import { tokens } from "@/lib/theme";
 import ProjectTitle from "@/components/project-title";
-import NextLink from "next/link";
-import LaunchIcon from "@mui/icons-material/Launch";
+import ProjectDescription from "@/components/project-description";
+import CustomLink from "@/components/custom-link";
+import Section from "@/components/section";
 
 const Endurofy = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-
   return (
     <ArticleLayout title={"Endurofy"}>
       <Box sx={{ mt: 5 }}>
@@ -27,7 +23,26 @@ const Endurofy = () => {
           over 300,000 food items from the USDA Central Food API and interactive
           data visualizations to track user fitness and weight progress.
         </Typography>
-        <Box mt={3}></Box>
+        <Section>
+          <Box mt={3}>
+            <List>
+              <ListItem>
+                <ProjectDescription title={"SOURCE CODE"}>
+                  <CustomLink
+                    href={"https://github.com/LePoisson104/Endurofy"}
+                  />
+                </ProjectDescription>
+              </ListItem>
+              <ListItem>
+                <ProjectDescription title={"STACK"}>
+                  <Typography component={"p"} variant="h6">
+                    ReactJS, Express.js, Redux, MySQL, AWS:RDS/S3, MUI
+                  </Typography>
+                </ProjectDescription>
+              </ListItem>
+            </List>
+          </Box>
+        </Section>
       </Box>
     </ArticleLayout>
   );
