@@ -5,11 +5,32 @@ import ProjectTitle from "@/components/project-title";
 import ProjectDescription from "@/components/project-description";
 import CustomLink from "@/components/custom-link";
 import Section from "@/components/section";
+import ImageSlider from "@/components/image-slider";
 
 const Endurofy = () => {
+  // Array of images
+  const images = [
+    "/images/endurofy/EndurofyHomepage.png",
+    "/images/endurofy/Login.png",
+    "/images/endurofy/Signup.png",
+    "/images/endurofy/Dashboard.png",
+    "/images/endurofy/FoodIntake.png",
+    "/images/endurofy/AllFood.png",
+    "/images/endurofy/FavoriteFood.png",
+    "/images/endurofy/CustomFood.png",
+    "/images/endurofy/EditCustomFood.png",
+    "/images/endurofy/FoodMacros.png",
+    "/images/endurofy/WeightLog.png",
+    "/images/endurofy/WorkoutLog.png",
+    "/images/endurofy/Profile.png",
+    "/images/endurofy/Calendar.png",
+    "/images/endurofy/Settings.png",
+    "/images/endurofy/Charts.png",
+  ];
+
   return (
     <ArticleLayout title={"Endurofy"}>
-      <Box sx={{ mt: 5 }}>
+      <Box sx={{ mt: 5, mb: 15 }}>
         <ProjectTitle title={"Endurofy"} time={"2024 -"} />
         <Typography
           component={"p"}
@@ -43,6 +64,7 @@ const Endurofy = () => {
             </List>
           </Box>
         </Section>
+        <ImageSlider delay={0.1} images={images}></ImageSlider>
       </Box>
     </ArticleLayout>
   );

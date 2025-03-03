@@ -6,7 +6,7 @@ import { Link, Box } from "@mui/material";
 const LinkItem = ({ href, children, target, bgcolor, isActive, ...props }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  console.log(isActive);
+
   return (
     <Link
       component={NextLink}

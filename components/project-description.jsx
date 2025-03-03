@@ -11,8 +11,8 @@ const ProjectDescription = ({ title, children }) => {
       <Typography
         fontWeight={600}
         sx={{
-          bgcolor: colors.greenAccent[800],
-          color: colors.greenAccent[200],
+          bgcolor: colors.greenAccent[700],
+          color: colors.greenAccent[100],
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

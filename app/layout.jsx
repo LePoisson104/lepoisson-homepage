@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
+          minHeight: "100vh",
         }}
       >
         <Providers>
@@ -34,7 +35,7 @@ export default function RootLayout({ children }) {
               mt: 7,
               width: "100%",
               maxWidth: "650px",
-              px: 4,
+              px: { md: 0, sm: 4, xs: 4 },
             }}
           >
             {children}
