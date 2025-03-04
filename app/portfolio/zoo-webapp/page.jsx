@@ -37,7 +37,6 @@ const Zoo = () => {
           sx={{ textIndent: "1em" }}
           mt={1}
           fontSize={15}
-          color="text.secondary"
         >
           A full-stack web application designed to optimize zoo operations and
           enhance the visitor experience. The platform features a RESTful API

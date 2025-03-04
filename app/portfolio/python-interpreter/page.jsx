@@ -19,7 +19,6 @@ const PythonInterpreter = () => {
           sx={{ textIndent: "1em" }}
           mt={1}
           fontSize={15}
-          color="text.secondary"
         >
           A web-based Python interpreter built with a custom C++ backend,
           enabling real-time code execution and performance comparison. The
@@ -54,8 +53,8 @@ const PythonInterpreter = () => {
               <ListItem>
                 <ProjectDescription title={"PS"}>
                   <Typography component={"p"} variant="h6">
-                    Due to free hosting, it might take a minute for the cold
-                    start.
+                    Due to free hosting, it might take up to a minute for the
+                    cold start.
                   </Typography>
                 </ProjectDescription>
               </ListItem>

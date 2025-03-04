@@ -72,6 +72,17 @@ export default function Home() {
   const colors = tokens(theme.palette.mode);
   const typedRef = useRef(null);
 
+  const BtnStyle = {
+    textTransform: "none",
+    color: colors.purpleAccent[300],
+    fontWeight: "bold",
+    // bgcolor: colors.purpleAccent[400],
+    "&:hover": {
+      bgcolor: "#edeefe",
+    },
+    px: 2,
+  };
+
   useEffect(() => {
     const typed = new Typed(typedRef.current, {
       strings: ["Hi, I'm Viet, a full-stack developer!"],
@@ -187,7 +198,7 @@ export default function Home() {
               href="/portfolio"
               endIcon={<ChevronRightIcon />}
               sx={{
-                color: "white",
+                color: colors.primary[400],
                 bgcolor: colors.purpleAccent[400],
                 textTransform: "none",
                 fontSize: 14,
@@ -400,13 +411,7 @@ export default function Home() {
                 <Button
                   startIcon={<LinkedInIcon />}
                   sx={{
-                    textTransform: "none",
-                    color: "white",
-                    bgcolor: colors.purpleAccent[400],
-                    "&:hover": {
-                      bgcolor: colors.purpleAccent[200],
-                    },
-                    px: 2,
+                    ...BtnStyle,
                   }}
                 >
                   LinkedIn
@@ -422,13 +427,7 @@ export default function Home() {
                 <Button
                   startIcon={<GitHubIcon />}
                   sx={{
-                    textTransform: "none",
-                    color: "white",
-                    bgcolor: colors.purpleAccent[400],
-                    "&:hover": {
-                      bgcolor: colors.purpleAccent[200],
-                    },
-                    px: 2,
+                    ...BtnStyle,
                   }}
                 >
                   @lepoisson104
@@ -444,13 +443,7 @@ export default function Home() {
                 <Button
                   startIcon={<InstagramIcon />}
                   sx={{
-                    textTransform: "none",
-                    color: "white",
-                    bgcolor: colors.purpleAccent[400],
-                    "&:hover": {
-                      bgcolor: colors.purpleAccent[200],
-                    },
-                    px: 2,
+                    ...BtnStyle,
                   }}
                 >
                   @vp_ghoan

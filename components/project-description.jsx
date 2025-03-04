@@ -9,14 +9,18 @@ const ProjectDescription = ({ title, children }) => {
   return (
     <Box sx={{ display: "flex", flexWrap: "wrap", width: "100%" }}>
       <Typography
-        fontWeight={600}
+        fontWeight={700}
+        fontSize={12}
         sx={{
-          bgcolor: colors.greenAccent[700],
-          color: colors.greenAccent[100],
+          // bgcolor: colors.greenAccent[800],
+          // color: colors.greenAccent[200],
+          color: theme.palette.mode === "dark" ? "#c6f6d5" : "#22543d",
+          bgcolor: theme.palette.mode === "dark" ? "#22543d" : "#c6f6d5",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           mr: 2,
+          px: 0.5,
         }}
       >
         {title}

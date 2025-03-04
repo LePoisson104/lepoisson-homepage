@@ -19,7 +19,6 @@ const PDWorld = () => {
           sx={{ textIndent: "1em" }}
           mt={1}
           fontSize={15}
-          color="text.secondary"
         >
           A PD World environment was developed where agents take turns picking
           up and dropping off blocks. SARSA and Q-Learning algorithms, utilizing

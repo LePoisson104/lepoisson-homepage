@@ -86,9 +86,9 @@ const Portfolio = () => {
           />
 
           <TechStackLogo
-            src={"/images/Material UI.png"}
-            alt={"MUILogo"}
-            bgcolor={"rgba(173, 216, 230, .5)"}
+            src={"/images/SupaBase.png"}
+            alt={"SupabaseLogo"}
+            bgcolor={"rgba(3,191,100,.1)"}
             duration={0.5}
             delay={0.8}
           />

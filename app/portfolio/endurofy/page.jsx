@@ -37,7 +37,6 @@ const Endurofy = () => {
           sx={{ textIndent: "1em" }}
           mt={1}
           fontSize={15}
-          color="text.secondary"
         >
           Endurofy is a comprehensive fitness tracking platform featuring food
           intake logging, weight monitoring, and workout tracking. It includes
