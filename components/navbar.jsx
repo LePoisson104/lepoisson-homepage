@@ -80,9 +80,6 @@ const Navbar = () => {
           <LinkItem href="/resume" isActive={pathname === "/resume"}>
             Resume
           </LinkItem>
-          <LinkItem href="/blog" isActive={pathname === "/blog"}>
-            Blog
-          </LinkItem>
           <LinkItem href="/contact" isActive={pathname === "/contact"}>
             Contact Me
           </LinkItem>
@@ -149,9 +146,6 @@ const Navbar = () => {
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <LinkItem href="/resume">Resume</LinkItem>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <LinkItem href="/blog">Blog</LinkItem>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <LinkItem href="/contact">Contact Me</LinkItem>
