@@ -60,27 +60,29 @@ const ImageSlider = ({ delay, images }) => {
         />
 
         {/* Buttons Container - Positioned on top of the image */}
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "0 10px",
-            zIndex: 2,
-          }}
-        >
-          <IconButton onClick={prevImage} sx={{ ...IconBtnStyle }}>
-            <KeyboardArrowLeftIcon />
-          </IconButton>
-          <IconButton onClick={nextImage} sx={{ ...IconBtnStyle }}>
-            <KeyboardArrowRightIcon />
-          </IconButton>
-        </Box>
+        {images?.length > 1 && (
+          <Box
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: "0 10px",
+              zIndex: 2,
+            }}
+          >
+            <IconButton onClick={prevImage} sx={{ ...IconBtnStyle }}>
+              <KeyboardArrowLeftIcon />
+            </IconButton>
+            <IconButton onClick={nextImage} sx={{ ...IconBtnStyle }}>
+              <KeyboardArrowRightIcon />
+            </IconButton>
+          </Box>
+        )}
 
         {/* Fullscreen Toggle Button */}
         <IconButton
@@ -159,12 +161,14 @@ const ImageSlider = ({ delay, images }) => {
               </IconButton>
 
               {/* Navigation Button */}
-              <IconButton
-                onClick={prevImage}
-                sx={{ color: colors.primary[1000], mr: 2 }}
-              >
-                <KeyboardArrowLeftIcon fontSize="large" />
-              </IconButton>
+              {images?.length > 1 && (
+                <IconButton
+                  onClick={prevImage}
+                  sx={{ color: colors.primary[1000], mr: 2 }}
+                >
+                  <KeyboardArrowLeftIcon fontSize="large" />
+                </IconButton>
+              )}
 
               {/* Fullscreen Image */}
               <Box
@@ -181,12 +185,14 @@ const ImageSlider = ({ delay, images }) => {
               />
 
               {/* Navigation Button */}
-              <IconButton
-                onClick={nextImage}
-                sx={{ color: colors.primary[1000], ml: 2 }}
-              >
-                <KeyboardArrowRightIcon fontSize="large" />
-              </IconButton>
+              {images?.length > 1 && (
+                <IconButton
+                  onClick={nextImage}
+                  sx={{ color: colors.primary[1000], ml: 2 }}
+                >
+                  <KeyboardArrowRightIcon fontSize="large" />
+                </IconButton>
+              )}
             </Box>
             {/* Dot Indicators for the Fullscreen Modal */}
             <Box
