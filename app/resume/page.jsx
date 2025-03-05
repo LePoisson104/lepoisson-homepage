@@ -31,7 +31,7 @@ import SectionTitle from "@/components/section-title";
 import ArticleLayout from "@/components/article";
 import { useTheme } from "@emotion/react";
 import { tokens } from "@/lib/theme";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 import NextLink from "next/link";
 
 const Resume = () => {
@@ -53,7 +53,7 @@ const Resume = () => {
           <Button
             href={"/Resume.pdf"}
             download="Viet_Pham_Resume.pdf"
-            endIcon={<FileDownloadIcon />}
+            endIcon={<DescriptionOutlinedIcon />}
             sx={{
               textTransform: "none",
               bgcolor: colors.purpleAccent[400],
@@ -170,23 +170,35 @@ const Resume = () => {
                   flexDirection: { xs: "column", sm: "row" },
                 }}
               >
-                <Typography variant="h6" component="h3">
-                  University of Houston
+                <Typography variant="body1">
+                  <span style={{ fontWeight: "bold" }}>
+                    University of Houston
+                  </span>{" "}
+                  | Houston, TX
                 </Typography>
                 <Typography variant="subtitle1">May 2024</Typography>
               </Box>
-              <Typography variant="subtitle1" gutterBottom>
+              <Typography variant="subtitle1" gutterBottom fontStyle={"italic"}>
                 B.S. in Computer Science, with a minor in Mathematics
               </Typography>
               <Typography variant="body2" gutterBottom>
-                <strong>Awards:</strong> Natural Science and Mathematics (NSM)
-                Scholarship, Transfer Excellence Scholarship
+                <strong
+                  style={{ fontStyle: "italic", textDecoration: "underline" }}
+                >
+                  Awards:
+                </strong>{" "}
+                Natural Science and Mathematics (NSM) Scholarship, Transfer
+                Excellence Scholarship
               </Typography>
               <Typography variant="body2">
-                <strong>Relevant Coursework:</strong> Algorithms and Data
-                Structures, Database Systems, Fundamentals of Software
-                Engineering, Software Design, Programming Languages and
-                Paradigms, Operating Systems, Fundamentals of Artificial
+                <strong
+                  style={{ fontStyle: "italic", textDecoration: "underline" }}
+                >
+                  Relevant Coursework:
+                </strong>{" "}
+                Algorithms and Data Structures, Database Systems, Fundamentals
+                of Software Engineering, Software Design, Programming Languages
+                and Paradigms, Operating Systems, Fundamentals of Artificial
                 Intelligence, Discrete Mathematics, Data Science and Statistical
                 Learning, Statistic for Sciences
               </Typography>

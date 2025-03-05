@@ -1,6 +1,5 @@
 "use client";
-import { Box, Typography, Link } from "@mui/material";
-import NextLink from "next/link";
+import { Box, Typography } from "@mui/material";
 import { useTheme } from "@emotion/react";
 import { tokens } from "@/lib/theme";
 import LinkItem from "./link-item";

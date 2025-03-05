@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   Badge,
+  Divider,
 } from "@mui/material";
 import NextLink from "next/link";
 import { useTheme } from "@emotion/react";
@@ -451,6 +452,41 @@ export default function Home() {
               </Link>
             </ListItem>
           </List>
+
+          <Divider />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <Typography
+              sx={{ textAlign: "center", mt: 2, fontWeight: "bold" }}
+              variant="h5"
+            >
+              Let's have a chat.
+            </Typography>
+            <Button
+              component={NextLink}
+              href="/contact"
+              endIcon={<ChevronRightIcon fontSize="small" />}
+              sx={{
+                textTransform: "none",
+                color: colors.primary[400],
+                bgcolor: colors.purpleAccent[400],
+                "&:hover": { bgcolor: colors.purpleAccent[300] },
+                px: 6,
+                py: 1,
+                fontWeight: "bold",
+                fontSize: 14,
+                mt: 2,
+              }}
+            >
+              Contact Me
+            </Button>
+          </Box>
         </Section>
       </Box>
     </ArticleLayout>
