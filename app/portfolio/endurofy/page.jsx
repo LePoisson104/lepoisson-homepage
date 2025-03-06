@@ -49,7 +49,7 @@ const Endurofy = () => {
               <ListItem>
                 <ProjectDescription title={"SOURCE CODE"}>
                   <CustomLink
-                    href={"https://github.com/LePoisson104/Endurofy"}
+                    href={"https://github.com/LePoisson104/Endurofy_prototype"}
                   />
                 </ProjectDescription>
               </ListItem>

@@ -298,7 +298,7 @@ const Resume = () => {
                   { label: "Demo", url: "/portfolio/endurofy" },
                   {
                     label: "Source Code",
-                    url: "https://github.com/LePoisson104/Endurofy",
+                    url: "https://github.com/LePoisson104/Endurofy_prototype",
                   },
                 ]}
                 technologies={["React", "Express.js", "Material UI", "MySQL"]}
