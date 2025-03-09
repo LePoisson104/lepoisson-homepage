@@ -2,6 +2,8 @@
   "name": "lepoisson-homepage",
   "version": "0.1.0",
   "private": true,
+  "author": "Viet Pham",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
