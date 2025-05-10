@@ -57,7 +57,7 @@ const ProjectCard = ({
                 bgcolor:
                   theme.palette.mode === "dark"
                     ? "rgba(255, 255, 255, 0.02)"
-                    : "rgba(255, 255, 255, 0.3)",
+                    : "white",
                 backfaceVisibility: "hidden",
                 borderRadius: 2,
               }}

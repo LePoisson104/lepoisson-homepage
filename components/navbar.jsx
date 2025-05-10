@@ -52,7 +52,7 @@ const Navbar = () => {
         width: "100%",
         top: 0,
         left: 0,
-        bgcolor: theme.palette.mode === "light" ? "#ffffff40" : "#20202380",
+        bgcolor: theme.palette.mode === "light" ? "#ffffff99" : "#20202380",
         backdropFilter: "blur(10px)",
         transition: "background-color 0.3s ease, backdrop-filter 0.3s ease",
         zIndex: 2,

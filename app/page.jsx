@@ -109,7 +109,7 @@ export default function Home() {
             mt: 5,
             mb: 5,
             bgcolor:
-              theme.palette.mode === "light" ? "#ffffff40" : colors.grey[500],
+              theme.palette.mode === "light" ? "#ffffff99" : colors.grey[800],
             backdropFilter: "blur(10px)",
           }}
         >

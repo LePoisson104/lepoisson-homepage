@@ -215,6 +215,7 @@ const Resume = () => {
                 <SkillCategory
                   title="Programming Languages"
                   skills={[
+                    "Java",
                     "JavaScript/TypeScript (Node.js)",
                     "C++",
                     "Python",
@@ -238,10 +239,13 @@ const Resume = () => {
                 <SkillCategory
                   title="Frameworks/Libraries"
                   skills={[
+                    "Spring Boot",
+                    "Javalin",
                     "Next.js",
                     "Express.js",
                     "Tailwind CSS",
                     "React",
+                    "Tanstack",
                     "Redux",
                     "RTK Query",
                     "Material UI",

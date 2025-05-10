@@ -23,7 +23,7 @@ const Portfolio = () => {
             flexWrap: "wrap",
             width: "100%",
             mt: 3,
-            mb: 3,
+            mb: 6,
             gap: 1,
           }}
         >
@@ -46,11 +46,43 @@ const Portfolio = () => {
           />
 
           <TechStackLogo
+            src={"/images/javaicon.png"}
+            alt={"javaLogo"}
+            bgcolor={"rgba(255, 255, 255, 0.7)"}
+            duration={0.5}
+            delay={0.3}
+          />
+
+          <TechStackLogo
+            src={"/images/cppicon.png"}
+            alt={"cppLogo"}
+            bgcolor={"rgba(173, 216, 230, .5)"}
+            duration={0.5}
+            delay={0.4}
+          />
+
+          <TechStackLogo
+            src={"/images/pythonicon.png"}
+            alt={"pythonLogo"}
+            bgcolor={"rgba(255, 255, 255, 0.5)"}
+            duration={0.5}
+            delay={0.5}
+          />
+
+          <TechStackLogo
+            src={"/images/springbooticon.png"}
+            alt={"SpringbootLogo"}
+            bgcolor={"rgba(3,191,100,.1)"}
+            duration={0.5}
+            delay={0.6}
+          />
+
+          <TechStackLogo
             src={"/images/ReactLogo.png"}
             alt={"ReactLogo"}
             bgcolor={"rgba(173, 216, 230, .5)"}
             duration={0.5}
-            delay={0.3}
+            delay={0.7}
           />
 
           <TechStackLogo
@@ -58,7 +90,7 @@ const Portfolio = () => {
             alt={"NextLogo"}
             bgcolor={"rgba(255, 255, 255, 0.5)"}
             duration={0.5}
-            delay={0.4}
+            delay={0.8}
           />
 
           <TechStackLogo
@@ -66,7 +98,7 @@ const Portfolio = () => {
             alt={"ExpressLogo"}
             bgcolor={"rgba(255, 255, 255, 0.5)"}
             duration={0.5}
-            delay={0.5}
+            delay={0.9}
           />
 
           <TechStackLogo
@@ -74,7 +106,7 @@ const Portfolio = () => {
             alt={"MySQLLogo"}
             bgcolor={"rgba(173, 216, 230, .5)"}
             duration={0.5}
-            delay={0.6}
+            delay={1}
           />
 
           <TechStackLogo
@@ -82,7 +114,7 @@ const Portfolio = () => {
             alt={"AWSLogo"}
             bgcolor={"rgba(255, 213, 140, .5)"}
             duration={0.5}
-            delay={0.7}
+            delay={1.1}
           />
 
           <TechStackLogo
@@ -90,7 +122,7 @@ const Portfolio = () => {
             alt={"SupabaseLogo"}
             bgcolor={"rgba(3,191,100,.1)"}
             duration={0.5}
-            delay={0.8}
+            delay={1.2}
           />
         </Box>
         <SectionTitle title={"Works"} width={58} />
