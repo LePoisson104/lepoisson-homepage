@@ -10,60 +10,64 @@ import ImageSlider from "@/components/image-slider";
 const Endurofy = () => {
   // Array of images
   const images = [
-    "/images/endurofy/EndurofyHomepage.png",
-    "/images/endurofy/Login.png",
-    "/images/endurofy/Signup.png",
-    "/images/endurofy/Dashboard.png",
-    "/images/endurofy/FoodIntake.png",
-    "/images/endurofy/AllFood.png",
-    "/images/endurofy/FavoriteFood.png",
-    "/images/endurofy/CustomFood.png",
-    "/images/endurofy/EditCustomFood.png",
-    "/images/endurofy/FoodMacros.png",
-    "/images/endurofy/WeightLog.png",
-    "/images/endurofy/WorkoutLog.png",
-    "/images/endurofy/Profile.png",
-    "/images/endurofy/Calendar.png",
-    "/images/endurofy/Settings.png",
-    "/images/endurofy/Charts.png",
+    "/images/endurofy/dashboard.png",
+    "/images/endurofy/workoutlog.png",
+    "/images/endurofy/weightlog1.png",
+    "/images/endurofy/weightlog2.png",
+    "/images/endurofy/workoutprogram.png",
+    "/images/endurofy/mobile-dashboard.png",
+    "/images/endurofy/mobile-workoutlog.png",
+    "/images/endurofy/mobile-weightlog1.png",
+    "/images/endurofy/mobile-weightlog2.png",
+    "/images/endurofy/mobile-workoutprogram.png",
   ];
 
   return (
     <ArticleLayout title={"Endurofy"}>
       <Box sx={{ mt: 5, mb: 15 }}>
-        <ProjectTitle title={"Endurofy"} time={"2024 -"} />
+        <ProjectTitle title={"Endurofy"} time={"Mar 2025 -"} />
         <Typography
           component={"p"}
           sx={{ textIndent: "1em" }}
           mt={1}
           fontSize={15}
         >
-          Endurofy is a comprehensive fitness tracking platform featuring food
-          intake logging, weight monitoring, and workout tracking. It includes
-          over 300,000 food items from the USDA Central Food API and interactive
-          data visualizations to track user fitness and weight progress.
+          Endurofy is a comprehensive fitness tracking platform that allows
+          users to create personalized workout programs. For each day, Endurofy
+          automatically generates a tailored workout based on the user&apos;s
+          selected program. In addition to workout planning, users can track
+          their daily weight and calorie intake, providing a complete picture of
+          their fitness journey.
         </Typography>
         <Section>
           <Box mt={3}>
             <List>
               <ListItem>
-                <ProjectDescription title={"SOURCE CODE"}>
+                <ProjectDescription title={"FRONT-END SOURCE CODE"}>
                   <CustomLink
-                    href={"https://github.com/LePoisson104/Endurofy_prototype"}
+                    href={"https://github.com/LePoisson104/endurofy"}
+                  />
+                </ProjectDescription>
+              </ListItem>
+              <ListItem>
+                <ProjectDescription title={"BACK-END SOURCE CODE"}>
+                  <CustomLink
+                    href={"https://github.com/LePoisson104/Endurofy_api"}
                   />
                 </ProjectDescription>
               </ListItem>
               <ListItem>
                 <ProjectDescription title={"STACK"}>
                   <Typography component={"p"} variant="h6">
-                    ReactJS, Express.js, Redux, MySQL, AWS:RDS/S3, MUI
+                    Next.js, Express.js, Redux, RTK Query, MySQL, Shadcn UI,
+                    Tailwind CSS, Docker, AWS:RDS/S3
                   </Typography>
                 </ProjectDescription>
               </ListItem>
             </List>
           </Box>
         </Section>
-        <ImageSlider delay={0.1} images={images}></ImageSlider>
+        <ImageSlider delay={0.1} images={images} />
       </Box>
     </ArticleLayout>
   );

@@ -136,6 +136,26 @@ const Portfolio = () => {
               title={"Endurofy"}
               delay={0.1}
               href={"/portfolio/endurofy"}
+              src={"/images/endurofy/EndurofyLogo.png"}
+              alt={"EndurofyLogo"}
+              width={80}
+              height={80}
+              fontWeight={"bold"}
+              fontSize={30}
+            >
+              <Typography
+                component={"p"}
+                sx={{ textIndent: "1em" }}
+                color="text.secondary"
+              >
+                A fitness app that allow users to track their workouts and daily
+                weights.
+              </Typography>
+            </ProjectCard>
+            <ProjectCard
+              title={"Endurofy Prototype"}
+              delay={0.1}
+              href={"/portfolio/endurofy-prototype"}
               content={"Endurofy"}
               color={colors.purpleAccent[400]}
               fontWeight={"bold"}
