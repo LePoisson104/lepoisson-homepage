@@ -11,7 +11,7 @@ const Endurofy = () => {
   // Array of images
   const images = [
     "/images/endurofy/EndurofyDashboard.png",
-    "/images/endurofy/EndurofyWorkoutLog.png",
+    "/images/endurofy/EndurofyWorkoutlog.png",
     "/images/endurofy/weightlog1.png",
     "/images/endurofy/weightlog2.png",
     "/images/endurofy/workoutprogram.png",
