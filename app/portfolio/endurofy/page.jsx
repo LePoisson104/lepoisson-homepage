@@ -10,8 +10,8 @@ import ImageSlider from "@/components/image-slider";
 const Endurofy = () => {
   // Array of images
   const images = [
-    "/images/endurofy/dashboard.png",
-    "/images/endurofy/workoutlog.png",
+    "/images/endurofy/EndurofyDashboard.png",
+    "/images/endurofy/EndurofyWorkoutLog.png",
     "/images/endurofy/weightlog1.png",
     "/images/endurofy/weightlog2.png",
     "/images/endurofy/workoutprogram.png",
