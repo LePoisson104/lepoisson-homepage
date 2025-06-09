@@ -178,8 +178,12 @@ const Resume = () => {
                 </Typography>
                 <Typography variant="subtitle1">May 2024</Typography>
               </Box>
+
               <Typography variant="subtitle1" gutterBottom fontStyle={"italic"}>
                 B.S. in Computer Science, with a minor in Mathematics
+              </Typography>
+              <Typography variant="body2" gutterBottom>
+                <strong>Cumulative GPA:</strong> 3.35/4.0
               </Typography>
               <Typography variant="body2" gutterBottom>
                 <strong
@@ -280,10 +284,9 @@ const Resume = () => {
                 The Woodlands, TX
               </Typography>
               <List dense>
-                <BulletPoint text="Assisted users with VPN setup, email troubleshooting, account management, and password resets via phone and chat." />
-                <BulletPoint text="Diagnosed and resolved Windows, macOS, and mobile device technical issues, escalating complex cases as needed." />
-                <BulletPoint text="Provided user education and guidance on Microsoft Office, remote access tools, and security best practices." />
-                <BulletPoint text="Maintained customer satisfaction scores above 90% by providing timely and effective support." />
+                <BulletPoint text="Provided phone-based tech support for Windows environments, covering user login issues, Outlook issues." />
+                <BulletPoint text="Troubleshoot and resolve network issues by configuring static IPs and mapping drives." />
+                <BulletPoint text="Used Task Manager, Command Prompt, to identify and fix system performances issues." />
               </List>
             </Box>
 
@@ -301,18 +304,26 @@ const Resume = () => {
                 links={[
                   { label: "Demo", url: "/portfolio/endurofy" },
                   {
-                    label: "Source Code",
-                    url: "https://github.com/LePoisson104/Endurofy_prototype",
+                    label: "Front-end",
+                    url: "https://github.com/LePoisson104/endurofy",
+                  },
+                  {
+                    label: "Back-end",
+                    url: "https://github.com/LePoisson104/Endurofy_api",
                   },
                 ]}
-                technologies={["React", "Express.js", "Material UI", "MySQL"]}
+                technologies={[
+                  "TypeScript",
+                  "Next.js",
+                  "Express.js",
+                  "Redux",
+                  "MySQL",
+                ]}
                 description={[
-                  "Developed a comprehensive fitness tracking platform with features for food intakes, weight monitoring, and workout logging.",
-                  "Integrated USDA Food Data Central API to provide nutritional information for 300,000+ food items.",
-                  "Implemented secure JWT authentication with token rotation and advanced session management.",
-                  "Created interactive data visualization to track user fitness and weight progress.",
-                  "Integrated seamless third-party fitness app connectivity, allowing users to sync data from platforms like Apple health, myfitnesspal, and more to Endurofy for comprehensive health and fitness tracking.",
-                  "Designed adaptive user interfaces using Material UI and React, automatically displaying a mobile-optimized version on smaller screens and desktop layout on larger screens, ensuring smooth experience across devices.",
+                  "Developed and deployed a full-stack fitness app to enhance personal fitness tracking efficiency by 80%.",
+                  "Utilized MySQL for data storage, Express.js for RESTful API backend, and Next.js with shadcn/ui for a responsive user interface.",
+                  "Integrated third-party APIs (Apple Health, MyFitnessPal, Cronometer) to enhance data sync and user retention.",
+                  "Improved user experience by consolidating workout logging, weight tracking, and daily calorie data syncing via third-party APIs into one app, boosting daily users by 35% and workout logging consistency by over 50%.",
                 ]}
                 color={colors.primary[1000]}
               />
@@ -333,9 +344,9 @@ const Resume = () => {
                 ]}
                 technologies={["C++", "React", "Express.js", "ChakraUI"]}
                 description={[
-                  "Engineer an interactive web-based Python interpreter written from scratch in C++, enabling real-time code execution.",
-                  "Developed a RESTful API that processes source code sent from the frontend, interprets it using an interpreter written in C++, and returns the output along with execution time.",
-                  "Implemented seamless frontend-backend communication, allowing direct performance comparison of execution speeds between the custom C++ interpreter and native Python, with results showing ~20 - 25% execution time difference.",
+                  "Engineer a Python interpreter written from scratch in C++.",
+                  "Utilized Express.js to build a RESTful API that receives source code, runs it through a custom interpreter, and returns real-time output to the React.js frontend.",
+                  "Performed benchmarks to measure execution time differences between the custom C++ interpreter and native Python, revealing a 80-85% similarity in execution speed.",
                 ]}
                 color={colors.primary[1000]}
               />
@@ -355,7 +366,7 @@ const Resume = () => {
                 description={[
                   "Developed a full-stack web app to streamline zoo operations and improve visitor experience.",
                   "Implemented a RESTful API for seamless front-end and back-end communication, enabling efficient data retrieval and manipulation with near real-time response (<10ms).",
-                  "Integrated AWS API for secure and scalable cloud storage solutions, enhancing data accessibility and reliability.",
+                  "Integrated AWS RDS for scalable cloud storage solutions, improving data accessibility and reliability.",
                 ]}
                 color={colors.primary[1000]}
               />
@@ -392,8 +403,8 @@ const Resume = () => {
                 Vietnamese
               </Typography>
               <Typography variant="body1">
-                <strong>Interests:</strong> Full Stack Web Development, Data
-                Science, Machine Learning and Artificial Intelligence
+                <strong>Interests:</strong> Software Development, Machine
+                Learning and Artificial Intelligence, Data Science
               </Typography>
             </Box>
           </Paper>
