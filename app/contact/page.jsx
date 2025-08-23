@@ -23,6 +23,7 @@ const Contact = () => {
     mb: 2,
     "& .MuiOutlinedInput-root": {
       borderRadius: 3,
+      fontSize: "16px", // Prevent zoom on iOS Safari
       "&:hover fieldset": {
         borderColor: colors.primary[1000], // Green border on hover
       },
@@ -31,12 +32,16 @@ const Contact = () => {
       },
     },
     "& .MuiInputLabel-root": {
+      fontSize: "16px", // Prevent zoom on iOS Safari
       "&.Mui-focused": {
         color: colors.primary[1000], // Green label when focused
       },
       "&:hover": {
         color: colors.primary[1000], // Green label on hover
       },
+    },
+    "& .MuiOutlinedInput-input": {
+      fontSize: "16px", // Prevent zoom on iOS Safari
     },
   };
 
