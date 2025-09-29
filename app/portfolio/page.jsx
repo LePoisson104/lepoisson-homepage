@@ -136,7 +136,7 @@ const Portfolio = () => {
               title={"Endurofy"}
               delay={0.1}
               href={"/portfolio/endurofy"}
-              src={"/images/endurofy/EndurofyLogo.png"}
+              src={"/images/endurofy/endurofylogo.png"}
               alt={"EndurofyLogo"}
               width={80}
               height={80}
