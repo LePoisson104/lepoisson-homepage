@@ -43,6 +43,11 @@ const Endurofy = () => {
           <Box mt={3}>
             <List>
               <ListItem>
+                <ProjectDescription title={"WEBSITE"}>
+                  <CustomLink href={"https://endurofy.app"} />
+                </ProjectDescription>
+              </ListItem>
+              <ListItem>
                 <ProjectDescription title={"FRONT-END SOURCE CODE"}>
                   <CustomLink
                     href={"https://github.com/LePoisson104/endurofy"}
@@ -60,7 +65,7 @@ const Endurofy = () => {
                 <ProjectDescription title={"STACK"}>
                   <Typography component={"p"} variant="h6">
                     Next.js, Express.js, Redux, RTK Query, MySQL, Shadcn UI,
-                    Tailwind CSS, Docker, AWS:RDS/S3
+                    Tailwind CSS, Docker, Railway
                   </Typography>
                 </ProjectDescription>
               </ListItem>

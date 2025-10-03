@@ -302,7 +302,7 @@ const Resume = () => {
                 title="Endurofy"
                 date="June 2024 - Present"
                 links={[
-                  { label: "Demo", url: "/portfolio/endurofy" },
+                  { label: "Website", url: "https://endurofy.app" },
                   {
                     label: "Front-end",
                     url: "https://github.com/LePoisson104/endurofy",
