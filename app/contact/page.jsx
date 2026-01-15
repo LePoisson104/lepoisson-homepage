@@ -212,12 +212,16 @@ const Contact = () => {
                 py: 1.5,
                 textTransform: "none",
                 width: "30%",
-                bgcolor: colors.purpleAccent[400],
-                color: colors.primary[400],
+                minWidth: 180,
+                height: "45px",
+                bgcolor: colors.blueAccent[1200],
+                color: colors.blueAccent[500],
+                border: "1px solid",
+                borderColor: colors.blueAccent[500],
                 borderRadius: 2,
                 fontWeight: "bold",
                 fontSize: 14,
-                "&:hover": { bgcolor: colors.purpleAccent[300] },
+                "&:hover": { bgcolor: colors.blueAccent[1100] },
               }}
             >
               {status.submitting ? (

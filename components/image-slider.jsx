@@ -14,7 +14,7 @@ const ImageSlider = ({ delay, images }) => {
   const colors = tokens(theme.palette.mode);
 
   const IconBtnStyle = {
-    color: colors.purpleAccent[400],
+    color: colors.blueAccent[500],
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,7 +92,7 @@ const ImageSlider = ({ delay, images }) => {
             top: 10,
             right: 10,
             zIndex: 3,
-            color: colors.purpleAccent[400],
+            color: colors.blueAccent[500],
           }}
         >
           <FullscreenIcon />
@@ -108,7 +108,7 @@ const ImageSlider = ({ delay, images }) => {
                 height: 7,
                 borderRadius: "50%",
                 bgcolor:
-                  index === currentIndex ? colors.purpleAccent[400] : "white",
+                  index === currentIndex ? colors.blueAccent[500] : "white",
                 transition: "background-color 0.3s ease",
               }}
             />
@@ -206,9 +206,7 @@ const ImageSlider = ({ delay, images }) => {
                     height: 7,
                     borderRadius: "50%",
                     bgcolor:
-                      index === currentIndex
-                        ? colors.purpleAccent[400]
-                        : "white",
+                      index === currentIndex ? colors.blueAccent[500] : "white",
                     transition: "background-color 0.3s ease",
                   }}
                 />

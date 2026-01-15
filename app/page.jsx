@@ -75,11 +75,10 @@ export default function Home() {
 
   const BtnStyle = {
     textTransform: "none",
-    color: colors.purpleAccent[300],
+    color: colors.blueAccent[500],
     fontWeight: "bold",
-    // bgcolor: colors.purpleAccent[400],
     "&:hover": {
-      bgcolor: "#edeefe",
+      bgcolor: colors.blueAccent[1100],
     },
     px: 2,
   };
@@ -166,52 +165,84 @@ export default function Home() {
               textAlign: "justify",
               hyphens: "auto",
               mt: 1,
+              fontSize: 14,
             }}
           >
-            Viet is a full-stack developer based in Texas, recently graduated
-            with a Bachelor of Science in Computer Science with a minor in
-            Mathematics. He is currently looking for a full-time position while
-            working on{" "}
-            <Link
-              component={NextLink}
-              href={"/portfolio/endurofy"}
-              underline="none"
-              sx={{
-                color: colors.purpleAccent[300],
-                cursor: "pointer",
-                "&:hover": {
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              Endurofy
-            </Link>
-            , a fitness app designed to help users track their food intake,
-            workouts, and overall health goals. Viet is passionate about
-            building digital solutions that enhance everyday life, from
-            designing and developing applications to solving real-world problems
-            with code. When not coding, he enjoys working out, exploring new
-            technologies, and refining his craft.
+            Viet is a full-stack web developer based in Texas with a Bachelor of
+            Science in Computer Science and a minor in Mathematics. He
+            specializes in building scalable, user-focused web applications,
+            working across both front-end and back-end technologies. Viet is
+            actively pursuing full-time roles while freelancing to help
+            individuals and businesses bring their ideas to life. Outside of
+            coding, he enjoys working out, exploring new technologies, and
+            continuously improving his craft.
           </Typography>
-          <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mt: 3,
+              alignItems: "center",
+            }}
+          >
             <Button
               component={NextLink}
               href="/portfolio"
-              endIcon={<ChevronRightIcon />}
+              className="arrow-button"
               sx={{
-                color: colors.primary[400],
-                bgcolor: colors.purpleAccent[400],
+                color: colors.blueAccent[500],
+                bgcolor: colors.blueAccent[1200],
+                border: "1px solid",
+                borderRadius: 2,
+                borderColor: colors.blueAccent[500],
                 textTransform: "none",
                 fontSize: 14,
                 fontWeight: "bold",
                 py: 1,
                 px: 2,
                 "&:hover": {
-                  bgcolor: colors.purpleAccent[300],
+                  bgcolor: colors.blueAccent[1100],
+                  borderColor: colors.blueAccent[500],
+                },
+                "& .arrow-icon__tip": {
+                  transform: "translateX(-4px)",
+                  transition: "transform 150ms",
+                },
+                "& .arrow-icon__line": {
+                  opacity: 0,
+                  transition: "opacity 150ms",
+                },
+                "&:hover .arrow-icon__tip": {
+                  transform: "translateX(0px)",
+                },
+                "&:hover .arrow-icon__line": {
+                  opacity: 1,
                 },
               }}
             >
               My portfolio
+              <svg
+                className="arrow-icon"
+                viewBox="0 -3.5 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ width: "24px", height: "17px", marginLeft: "8px" }}
+              >
+                <path
+                  className="arrow-icon__tip"
+                  d="M8 15L14 8.5L8 2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <line
+                  className="arrow-icon__line"
+                  x1="13"
+                  y1="8.5"
+                  y2="8.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+              </svg>
             </Button>
           </Box>
         </Section>
@@ -255,19 +286,19 @@ export default function Home() {
                   <Link
                     component={NextLink}
                     href={
-                      "https://www.google.com/search?q=quang+nam&rlz=1C5MACD_enUS1018US1018&oq=quang+n&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIJCAEQRRg7GIAEMgYIAhBFGDkyDQgDEC4YkQIYgAQYigUyDQgEEC4YkQIYgAQYigUyDQgFEC4YkQIYgAQYigUyDQgGEC4YkQIYgAQYigUyBggHEEUYPdIBCDIyMjRqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"
+                      "https://www.google.com/search?q=da+nang&rlz=1C5MACD_enUS1018US1018&oq=da+nang&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDQgBEC4YgwEYsQMYgAQyCggCEAAYsQMYgAQyEAgDEC4YrwEYxwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyCggFEAAYsQMYgAQyBwgGEAAYgAQyDQgHEC4YgwEYsQMYgAQyBwgIEAAYgAQyBwgJEAAYgATSAQgxNTQ4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
                     }
                     underline="none"
                     target="_blank"
                     sx={{
-                      color: colors.purpleAccent[300],
+                      color: colors.blueAccent[500],
                       cursor: "pointer",
                       "&:hover": {
                         textDecoration: "underline",
                       },
                     }}
                   >
-                    Quảng Nam
+                    Đà Nẵng
                   </Link>
                   , Việt Nam.
                 </Typography>
@@ -298,7 +329,7 @@ export default function Home() {
               >
                 <Typography component={"p"} color="text.secondary">
                   Graduated from Lone Star College, The Woodlands, TX with an
-                  Associate of Science in Computer Science (GPA: 4.0).
+                  Associate of Science in Computer Science.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -328,7 +359,7 @@ export default function Home() {
                 <Typography component={"p"} color="text.secondary">
                   Completed my Bachelor of Science in Computer Science with a
                   minor in Mathematics from the University of Houston, Houston,
-                  TX (GPA: 3.35).
+                  TX.
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -369,21 +400,7 @@ export default function Home() {
                     wordBreak: "break-word",
                   }}
                 >
-                  Working on my startup{" "}
-                  <Link
-                    component={NextLink}
-                    href={"/portfolio/endurofy"}
-                    underline="none"
-                    sx={{
-                      color: colors.purpleAccent[300],
-                      cursor: "pointer",
-                      "&:hover": {
-                        textDecoration: "underline",
-                      },
-                    }}
-                  >
-                    Endurofy
-                  </Link>
+                  Working as a freelancer
                 </Typography>
               </TimelineContent>
             </TimelineItem>
@@ -396,7 +413,7 @@ export default function Home() {
             component={"p"}
             sx={{ textAlign: "justify", textIndent: "1em" }}
           >
-            Web development, Weight lifting, Sports, Video games
+            Web development, Weight lifting
           </Typography>
         </Section>
 
@@ -458,33 +475,70 @@ export default function Home() {
             sx={{
               display: "flex",
               justifyContent: "center",
+              mt: 3,
               alignItems: "center",
-              flexDirection: "column",
             }}
           >
-            <Typography
-              sx={{ textAlign: "center", mt: 2, fontWeight: "bold" }}
-              variant="h5"
-            >
-              Let's have a chat.
-            </Typography>
             <Button
               component={NextLink}
               href="/contact"
-              endIcon={<ChevronRightIcon fontSize="small" />}
+              className="arrow-button"
               sx={{
+                minWidth: 180,
+                height: "45px",
+                color: colors.blueAccent[500],
+                bgcolor: colors.blueAccent[1200],
+                border: "1px solid",
+                borderRadius: 2,
+                borderColor: colors.blueAccent[500],
                 textTransform: "none",
-                color: colors.primary[400],
-                bgcolor: colors.purpleAccent[400],
-                "&:hover": { bgcolor: colors.purpleAccent[300] },
-                px: 6,
-                py: 1,
-                fontWeight: "bold",
                 fontSize: 14,
-                mt: 2,
+                fontWeight: "bold",
+                py: 1,
+                px: 2,
+                "&:hover": {
+                  bgcolor: colors.blueAccent[1100],
+                  borderColor: colors.blueAccent[500],
+                },
+                "& .arrow-icon__tip": {
+                  transform: "translateX(-4px)",
+                  transition: "transform 150ms",
+                },
+                "& .arrow-icon__line": {
+                  opacity: 0,
+                  transition: "opacity 150ms",
+                },
+                "&:hover .arrow-icon__tip": {
+                  transform: "translateX(0px)",
+                },
+                "&:hover .arrow-icon__line": {
+                  opacity: 1,
+                },
               }}
             >
-              Contact Me
+              Contact me
+              <svg
+                className="arrow-icon"
+                viewBox="0 -3.5 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ width: "24px", height: "17px", marginLeft: "8px" }}
+              >
+                <path
+                  className="arrow-icon__tip"
+                  d="M8 15L14 8.5L8 2"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+                <line
+                  className="arrow-icon__line"
+                  x1="13"
+                  y1="8.5"
+                  y2="8.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                />
+              </svg>
             </Button>
           </Box>
         </Section>

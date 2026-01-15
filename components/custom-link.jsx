@@ -13,7 +13,7 @@ const CustomLink = ({ href }) => {
       target="_blank"
       underline="none"
       sx={{
-        color: colors.purpleAccent[300],
+        color: colors.blueAccent[500],
         cursor: "pointer",
         "&:hover": {
           textDecoration: "underline",

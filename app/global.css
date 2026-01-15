@@ -1,0 +1,27 @@
+.arrow-button {
+  transition: background 150ms;
+}
+
+.arrow-button:hover .arrow-icon__tip,
+.arrow-button:focus .arrow-icon__tip {
+  transform: translateX(0px);
+}
+
+.arrow-button:hover .arrow-icon__line,
+.arrow-button:focus .arrow-icon__line {
+  opacity: 1;
+}
+
+.arrow-button:focus {
+  outline-offset: 4px;
+}
+
+.arrow-icon__tip {
+  transform: translateX(-4px);
+  transition: transform 150ms;
+}
+
+.arrow-icon__line {
+  opacity: 0;
+  transition: opacity 150ms;
+}

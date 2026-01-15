@@ -27,8 +27,8 @@ const Footer = () => {
       <LinkItem
         href={"https://www.craftz.dog/"}
         target={"_blank"}
-        color={colors.purpleAccent[300]}
-        bgcolor={colors.purpleAccent[300]}
+        color={colors.blueAccent[500]}
+        bgcolor={colors.blueAccent[500]}
         fontSize={13}
       >
         Inspired by @craftzdog

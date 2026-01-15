@@ -77,9 +77,6 @@ const Navbar = () => {
           <LinkItem href="/portfolio" isActive={pathname === "/portfolio"}>
             Portfolio
           </LinkItem>
-          <LinkItem href="/resume" isActive={pathname === "/resume"}>
-            Resume
-          </LinkItem>
           <LinkItem href="/contact" isActive={pathname === "/contact"}>
             Contact Me
           </LinkItem>
@@ -143,9 +140,6 @@ const Navbar = () => {
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <LinkItem href="/portfolio">Portfolio</LinkItem>
-            </MenuItem>
-            <MenuItem onClick={handleClose}>
-              <LinkItem href="/resume">Resume</LinkItem>
             </MenuItem>
             <MenuItem onClick={handleClose}>
               <LinkItem href="/contact">Contact Me</LinkItem>
